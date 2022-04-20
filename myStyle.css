@@ -1,0 +1,279 @@
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(17, auto) 1fr;
+    grid-template-rows: repeat(10, auto) 1fr;
+    width: 90%;
+    margin: 1vw;
+    max-width: 100%;
+}
+
+.periodic-table-element {
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3 ease;
+}
+
+.periodic-table-element .periodic-element-inner {
+    background: white;
+    padding: 4px;
+    width: 5vw;
+    height: 5vw;
+    transition: inherit;
+    border-radius: 20%;
+}
+
+.periodic-table-element .chemicalSymbol {
+    font-family:"Poppins",sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5vw;
+    font-size: 3vw;
+    transition: 0.8s ease 600ms;
+}
+
+.periodic-table-element .atomicNumber {
+    float: left;
+    font-family: "Poppins",sans-serif;
+    font-size: 1vw;
+    position: absolute;
+}
+
+.periodic-table-element .chemicalElement {
+    font-family:"Poppins",sans-serif;
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+.periodic-table-element:hover {
+    transform: scale(1.12);
+    z-index: 30;
+}
+
+.periodic-table-element:hover .periodic-element-inner {
+    background: transparent;
+}
+
+.periodic-table-element:hover .chemicalSymbol, .periodic-table-element:hover .atomicNumber, .periodic-table-element:hover .chemicalElement {
+    -webkit-text-fill-color: #222;
+}
+
+.periodic-table-element:hover::after {
+    top: 105%;
+    opacity: 1;
+}
+
+.periodic-table-element {
+    cursor: pointer;
+}
+
+.nonMetals {
+    background: linear-gradient(to bottom right,#5aff15 0%,#00b712 100%);
+    border-radius: 20%;
+}
+
+.metalloids {
+    background: linear-gradient(to bottom right,#a0f4ff 0%,#00e1ff 100%);
+    border-radius: 20%;
+}
+
+.nobleGases {
+    background: linear-gradient(to bottom right,#ffc0fc 0%,#ca00d1 100%);
+    border-radius: 20%;
+}
+
+.actinoids {
+    background: linear-gradient(to bottom right,#ffd5f2 0%,#ff219b 100%);
+    border-radius: 20%;
+}
+
+.alkaliMetals {
+    background: linear-gradient(to bottom right,#ffdfba 0%,#ffb648 100%);
+    border-radius: 20%;
+}
+
+.alkalineEarthMetals {
+    background: linear-gradient(to bottom right,#fff5ba 0%,#e9c600 100%);
+    border-radius: 20%;
+}
+
+.transitionMetals {
+    background: linear-gradient(to bottom right,#ffbaba 0%,#ff4545 100%);
+    border-radius: 20%;
+}
+
+.postTransitionMetals {
+    background: linear-gradient(to bottom right,#bae3ff 0%,#3fb2ff 100%);
+    border-radius: 20%;
+}
+
+.lanthanoids {
+    background: linear-gradient(to bottom right,#b3845e 0%,#b46000 100%);
+    border-radius: 20%;
+    margin-top: 2.5vw;
+}
+
+.hydrogen {
+    grid-column-start: -19;
+}
+
+.helium {
+    grid-column-start: -2;
+}
+
+.boron,
+.aluminium {
+    grid-column-start: 13;
+}
+.emptyspace {
+    grid-row-start:10;
+}
+
+.lanthanum {
+    grid-column-start: 3;
+    grid-row-start: 11;
+}
+
+.cerium {
+    grid-column-start: 4;
+    grid-row-start: 11;
+}
+
+.praseodymium {
+    grid-column-start: 5;
+    grid-row-start: 11;
+}
+
+.neodymium {
+    grid-column-start: 6;
+    grid-row-start: 11;
+}
+
+.promethium {
+    grid-column-start: 7;
+    grid-row-start: 11;
+}
+
+.samarium {
+    grid-column-start: 8;
+    grid-row-start: 11;
+}
+
+.europium {
+    grid-column-start: 9;
+    grid-row-start: 11;
+}
+
+.gadolinium {
+    grid-column-start: 10;
+    grid-row-start: 11;
+}
+
+.terbium {
+    grid-column-start: 11;
+    grid-row-start: 11;
+}
+
+.dysprosium {
+    grid-column-start: 12;
+    grid-row-start: 11;
+}
+
+.holmium {
+    grid-column-start: 13;
+    grid-row-start: 11;
+}
+
+.erbium {
+    grid-column-start: 14;
+    grid-row-start: 11;
+}
+
+.thulium {
+    grid-column-start: 15;
+    grid-row-start: 11;
+}
+
+.ytterbium {
+    grid-column-start: 16;
+    grid-row-start: 11;
+}
+
+.actinium {
+    grid-column-start: 3;
+    grid-row-start: 12;
+}
+
+.thorium {
+    grid-column-start: 4;
+    grid-row-start: 12;
+}
+
+.protactinium {
+    grid-column-start: 5;
+    grid-row-start: 12;
+}
+
+.uranium {
+    grid-column-start: 6;
+    grid-row-start: 12;
+}
+
+.neptunium {
+    grid-column-start: 7;
+    grid-row-start: 12;
+}
+
+.plutonium {
+    grid-column-start: 8;
+    grid-row-start: 12;
+}
+
+.americium {
+    grid-column-start: 9;
+    grid-row-start: 12;
+}
+
+.curium {
+    grid-column-start: 10;
+    grid-row-start: 12;
+}
+
+.berkelium {
+    grid-column-start: 11;
+    grid-row-start: 12;
+}
+
+.californium {
+    grid-column-start: 12;
+    grid-row-start: 12;
+}
+
+.einsteinium {
+    grid-column-start: 13;
+    grid-row-start: 12;
+}
+
+.fermium {
+    grid-column-start: 14;
+    grid-row-start: 12;
+}
+
+.mendelevium {
+    grid-column-start: 15;
+    grid-row-start: 12;
+}
+
+.nobelium {
+    grid-column-start: 16;
+    grid-row-start: 12;
+}
